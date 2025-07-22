@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "dockerimage/spring-petclinic"  // Change to your Docker Hub repo
+        IMAGE_NAME = "dharam3030/spring-petclinic"  // Change to your Docker Hub repo
     }
     stages {
         stage('Checkout') {
@@ -36,7 +36,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'docker run -d -p 9090:8080 dockerimage/spring-petclinic'
+                sh 'docker run -d -p 9090:8080 dharam3030/spring-petclinic'
             }
         }
     }
