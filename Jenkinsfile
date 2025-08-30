@@ -7,10 +7,6 @@ pipeline {
         HOST_PORT = '9090'
     }
 
-    tools {
-        maven 'Maven 3'
-    }
-
     stages {
         stage('Checkout Code') {
             steps {
